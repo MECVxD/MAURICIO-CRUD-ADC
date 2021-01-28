@@ -14,11 +14,9 @@ router.get('/', async(req, resp)=>{
 router.post('/', (req, resp)=>{
     let {id, firstname, lastname} = req.body
     let ok = ctrStudent.postStudent(id, firstname, lastname)
-    let status = 201
-    let msg = "Success"
-    return resp.status(status).send({
-        status: status,
-        msg: msg
+    return resp.status(201).send({
+        status: 201,
+        msg: "Resource created succesfully"
     })
 })
 
@@ -26,16 +24,18 @@ router.put('/:id', (req, resp)=>{
     let {id}=req.params
     let {firstname, lastname}= req.body
     ctrStudent.updateStudent(id, firstname, lastname)
-    return resp.send({
-        msg: "Student Updated"
+    return resp.status(200).send({
+        status: 200,
+        msg: "Resource updated succesfully"
     })
 })
 
 router.delete('/:id', (req, resp)=>{
     let {id}=req.params
     ctrStudent.deleteStudent(id)
-    return resp.send({
-        msg: "register deleted"
+    return resp.status(200).send({
+        status: 200,
+        msg: "Resource deleted succesfully"
     })
 })
 

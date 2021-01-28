@@ -6,7 +6,7 @@ router.get('/', async(req, resp)=>{
     let data = await ctrStudent.getStudents()
     return resp.status(200).send({
         status:200,
-        msg: "Success",
+        msg: "Resource retrieved succesfully",
         data:data
     })
 })

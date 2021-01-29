@@ -29,3 +29,5 @@ con.connection().then(msg=>{
 }).catch(err=>{
     console.log("There is a problem with connection")
 })
+
+module.exports = app

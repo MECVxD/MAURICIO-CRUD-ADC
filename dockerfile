@@ -1,9 +1,5 @@
-FROM node:12-alpine3.10
-RUN mkdir app
-WORKDIR app
-ENV PORT=8181
+FROM node:10.13-alpine
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE ${PORT}
-CMD node index

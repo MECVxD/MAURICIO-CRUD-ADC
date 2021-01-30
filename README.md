@@ -80,4 +80,10 @@ URL use an id of the data we want to delete `localhost:8181/v1/students/4`
 ```
 # Create Container With Docker-Compose
 To create the docker compose, is important change the data of the .env file. Execute this command
+
 `docker-compose up`
+
+# Execute Tests
+Run the test files with this command
+
+`npm test`

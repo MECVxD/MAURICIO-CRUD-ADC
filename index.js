@@ -16,10 +16,10 @@ require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(validateToken)
+//app.use(validateToken)
 
 //routes
-app.use('/v1/students', validate, students)
+app.use('/v1/students', students)//validadte
 
 //starting the server
 con.connection().then(msg=>{

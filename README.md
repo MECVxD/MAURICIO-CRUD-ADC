@@ -1,4 +1,4 @@
-### **Requirements**
+# **Requirements**
 - Docker
 - Node.js
 - MySQL
@@ -8,18 +8,18 @@
 
     remember mysql use te root user
 
-### **Excecute the app**
+# **Excecute the app**
 1. Clone this repo in your computer
 2. Install dependencies with `npm install`
 3. Create your own .env file based on the .env.example file
 4. Run whit comand `npm run dev`
 5. Try the application with postman or insomnia, based on the examples that propose down
 
-### **Examples**
+# **Examples**
 ## **-GET**
-# Request
+### Request
 URL `localhost:8181/v1/students/`
-# Response
+### Response
 ```
 {
   "status": 200,
@@ -34,7 +34,7 @@ URL `localhost:8181/v1/students/`
     ]
 ```
 ## **-POST**
-# Request
+### Request
 URL `localhost:8181/v1/students/`
 
 ```
@@ -44,7 +44,7 @@ URL `localhost:8181/v1/students/`
 	"lastname": "Carlos"
 }
 ```
-# Response
+### Response
 ```
 {
   "status": 201,
@@ -52,7 +52,7 @@ URL `localhost:8181/v1/students/`
 }
 ```
 ## **-PUT**
-# Request
+### Request
 URL use an id of the data we want to update `localhost:8181/v1/students/4`
 ```
 {
@@ -61,7 +61,7 @@ URL use an id of the data we want to update `localhost:8181/v1/students/4`
 	"lastname": "Perez"
 }
 ```
-# Response
+### Response
 ```
 {
   "status": 200,
@@ -69,12 +69,15 @@ URL use an id of the data we want to update `localhost:8181/v1/students/4`
 }
 ```
 ## **-DELETE**
-# Request
+### Request
 URL use an id of the data we want to delete `localhost:8181/v1/students/4`
-# Response         
+### Response         
 ```
 {
   "status": 200,
   "msg": "Resource deleted succesfully"
 }
 ```
+# Create Container With Docker-Compose
+To create the docker compose, is important change the data of the .env file. Execute this command
+`docker-compose up`
